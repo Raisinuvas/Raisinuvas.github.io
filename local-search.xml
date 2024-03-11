@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Hexo常用命令</title>
+    <link href="/2024/03/11/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2024/03/11/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="创建Blog相关命令"><a href="#创建Blog相关命令" class="headerlink" title="创建Blog相关命令"></a>创建Blog相关命令</h1><h2 id="1、新建blog"><a href="#1、新建blog" class="headerlink" title="1、新建blog"></a>1、新建blog</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new [layout] &quot;title&quot;<br></code></pre></td></tr></table></figure><p>layout是文章的布局，默认为post，title为文章标题</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">C:\Users\Yuxin Song\Blog_hexo\hexo-blog&gt;hexo new post &quot;Hexo常用命令&quot;<br>INFO  Validating config<br>INFO  Created: ~\Blog_hexo\hexo-blog\source\_posts\Hexo常用命令.md<br></code></pre></td></tr></table></figure><ul><li><p>Front-matter设置</p><p>Front-matter 是文章最上方以—分隔的区域，用于指定文章的变量设置</p></li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">hexo学习</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2020-09-16 19:33:46</span><br><span class="hljs-attr">tags:</span> <span class="hljs-string">hexo</span><br><span class="hljs-attr">categories:</span> <span class="hljs-string">其他</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><p>可以进行相应的变量设置</p><h2 id="2、Blog发布"><a href="#2、Blog发布" class="headerlink" title="2、Blog发布"></a>2、Blog发布</h2><p>写完之后输入：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>记录一哈C++学习规划</title>
     <link href="/2024/03/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E5%93%88C-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/"/>
     <url>/2024/03/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E5%93%88C-%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/</url>
