@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>C++基础知识点</title>
+    <link href="/2024/03/31/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <url>/2024/03/31/C-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Part1-数据类型"><a href="#Part1-数据类型" class="headerlink" title="Part1. 数据类型"></a>Part1. 数据类型</h1><h2 id="1-前置知识"><a href="#1-前置知识" class="headerlink" title="1. 前置知识"></a>1. 前置知识</h2><p><strong>变量和常量</strong>：变量存在的意义是为了方便管理内存空间。常量用于记录程序中不可更改的数据。</p><p>C++定义常量两种方式：</p><p>​1、**#define** 宏常量，通常在文件上方定义。</p><p>​2、<strong>const</strong> 修饰的变量，也是常量</p><p>常量不能被修改</p><h2 id="2-各种数据类型"><a href="#2-各种数据类型" class="headerlink" title="2. 各种数据类型"></a>2. 各种数据类型</h2><h4 id="数据类型存在的意义：给变量分配合适的空间"><a href="#数据类型存在的意义：给变量分配合适的空间" class="headerlink" title="数据类型存在的意义：给变量分配合适的空间"></a>数据类型存在的意义：给变量分配合适的空间</h4><ul><li>**<code>sizeof</code>(数据类型 &#x2F; 变量)**：返回占用的内存空间</li></ul><h4 id="实型（浮点型）"><a href="#实型（浮点型）" class="headerlink" title="实型（浮点型）"></a>实型（浮点型）</h4><p>float &#x3D; 4字节 &#x3D; 7位有效数字，double &#x3D; 8字节（15~16位有效数字）。C++中的有效数字（如3.14算作3位有效数字）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">float</span> f1 = <span class="hljs-number">3.12f</span>;<br><span class="hljs-type">double</span> d1 = <span class="hljs-number">3.14</span>;<br></code></pre></td></tr></table></figure><p>对于小数，C++中默认情况下最多保留6位有效数字</p><h4 id="科学计数法"><a href="#科学计数法" class="headerlink" title="科学计数法"></a>科学计数法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">float</span> f2 = <span class="hljs-number">3e2</span>;<span class="hljs-comment">//3*10^2</span><br><span class="hljs-type">float</span> f3 = <span class="hljs-number">3e-2</span>;<span class="hljs-comment">//3*0.1^2</span><br></code></pre></td></tr></table></figure><h4 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">char</span> ch = <span class="hljs-string">&#x27;a&#x27;</span><br></code></pre></td></tr></table></figure><ul><li>C和C++中字符变量只占用1字节</li><li><strong>字符变量并不是字符本身在内存中存储，而是存储字符的ASCII码</strong></li></ul><h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>用于表示一些不能显示出来的ASCII字符</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">cout &lt;&lt; <span class="hljs-string">&quot;C++\n&quot;</span><br>cout &lt;&lt; <span class="hljs-string">&quot;\\&quot;</span><span class="hljs-comment">//输出“\”</span><br>cout &lt;&lt; <span class="hljs-string">&quot;a\t&quot;</span><span class="hljs-comment">//整个占8个字符，如a占了一个，则会补全7个空格</span><br></code></pre></td></tr></table></figure><h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p><code>string 变量名 = &quot;字符串值&quot;</code>，需要包含头文件“string”</p><h4 id="bool类型"><a href="#bool类型" class="headerlink" title="bool类型"></a>bool类型</h4><p>占1字节大小，代表0或1</p><h4 id="数据的输入"><a href="#数据的输入" class="headerlink" title="数据的输入"></a>数据的输入</h4><p>语法：<code>cin &gt;&gt; 变量</code></p><h1 id="Part2-运算符"><a href="#Part2-运算符" class="headerlink" title="Part2. 运算符"></a>Part2. 运算符</h1><p>暂无</p><h1 id="Part3-程序流程结构"><a href="#Part3-程序流程结构" class="headerlink" title="Part3. 程序流程结构"></a>Part3. 程序流程结构</h1><h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><p><code>表达式1 ？表达式2：表达式3</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++">(a &gt; b ? a : b) = <span class="hljs-number">100</span>;<span class="hljs-comment">//如果a大于b,返回a,否则返回b,并把a值赋为100</span><br></code></pre></td></tr></table></figure><h4 id="do-while-循环语句"><a href="#do-while-循环语句" class="headerlink" title="do while 循环语句"></a>do while 循环语句</h4><p>do while会先执行一次循环，再判断循环条件</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">do</span>&#123;<br>    语句;<br>&#125;<span class="hljs-keyword">while</span>(条件);<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>C++</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>原创</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>leetcode面试150题——简单题</title>
     <link href="/2024/03/16/leetcode%E9%9D%A2%E8%AF%95150%E9%A2%98%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     <url>/2024/03/16/leetcode%E9%9D%A2%E8%AF%95150%E9%A2%98%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E9%A2%98/</url>
