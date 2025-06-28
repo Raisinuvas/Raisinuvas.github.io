@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Hexo配置</title>
+    <link href="/2025/06/28/Hexo%E9%85%8D%E7%BD%AE/"/>
+    <url>/2025/06/28/Hexo%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1、新建blog"><a href="#1、新建blog" class="headerlink" title="1、新建blog"></a>1、新建blog</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd C:\Users\Yuxin Song\Blog_hexo\hexo-blog<br>hexo new [layout] &quot;title&quot;<br></code></pre></td></tr></table></figure><p>layout是文章的布局，默认为post，title为文章标题</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">C:\Users\Yuxin Song\Blog_hexo\hexo-blog&gt;hexo new post &quot;Hexo常用命令&quot;<br>INFO  Validating config<br>INFO  Created: ~\Blog_hexo\hexo-blog\source\_posts\Hexo常用命令.md<br></code></pre></td></tr></table></figure><ul><li><p>Front-matter设置</p><p>Front-matter 是文章最上方以—分隔的区域，用于指定文章的变量设置</p></li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">hexo学习</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2020-09-16 19:33:46</span><br><span class="hljs-attr">tags:</span> <span class="hljs-string">hexo</span><br><span class="hljs-attr">categories:</span> <span class="hljs-string">其他</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><p><img src="hexo_command.png"></p><p>可以进行相应的变量设置</p><h2 id="2、Blog发布"><a href="#2、Blog发布" class="headerlink" title="2、Blog发布"></a>2、Blog发布</h2><p>写完之后输入：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure><h2 id="3、关于hexo图片插入"><a href="#3、关于hexo图片插入" class="headerlink" title="3、关于hexo图片插入"></a>3、关于hexo图片插入</h2><p>使用相对路径，首先检查Hexo的配置文件，<code>_config.yml</code>中，检查以下选项：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">post_asset_folder: <span class="hljs-literal">true</span>  <span class="hljs-comment"># 确保启用“文章资源文件夹”</span><br>relative_link: <span class="hljs-literal">true</span>      <span class="hljs-comment"># 生成相对路径（可选）</span><br></code></pre></td></tr></table></figure><p>使用“hexo new post”的时候会自动新建一个文件夹，将图片放入该文件夹中，并使用以下相对路径引用图片，注意不需要按照hexo文件夹的目录，在git上传的时候会自动放到同一路径：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++">“![](a.jpg)”<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具使用</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java入门</title>
     <link href="/2025/06/28/java%E5%85%A5%E9%97%A8/"/>
     <url>/2025/06/28/java%E5%85%A5%E9%97%A8/</url>
